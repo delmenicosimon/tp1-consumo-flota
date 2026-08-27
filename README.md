@@ -12,7 +12,8 @@ Viajes es un programa que se dedica a darte estos datos:
     
 ### Para ejecutarlo:
 #### Dependencias:
-Java 
+[Java](https://www.oracle.com/latam/java/technologies/downloads/)
+
 Primero se debe clonar el repositorio, despues se compila el codigo:
 
 ```
