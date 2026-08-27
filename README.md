@@ -32,7 +32,16 @@
     6. Consumo de gasolina cada 100 kilometros por flota
     7. Consumo de toda la flota dividido en EFICIENTE,NORMAL,EXCESIVO
     8. Camiones por categoria de consumo
-
+  ### Para ejecutarlo:
+  #### Dependencias:
+  [Java](https://www.oracle.com/latam/java/technologies/downloads/)
+  
+  Si ya clonaste el repositorio, para ejecutarlo se usa:
+  ```
+  javac Flota.java
+  java Flota
+  ```
+  
 ## Preguntas:
 1. En la parte C calculaste un promedio dividiendo un total por una cantidad. Explicá por qué ese cálculo puede dar un resultado equivocado en Java aunque el programa compile y no dé ningún error, y cómo lo resolviste.
 
