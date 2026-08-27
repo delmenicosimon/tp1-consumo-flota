@@ -4,7 +4,7 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 public class Flota {
-	final static int CANT_CAMIONES = 2;
+	final static int CANT_CAMIONES = 6;
 
 	final static String ESCAPE = new String("\033[");
 	final static int ESPACIO = 35;
@@ -50,8 +50,11 @@ public class Flota {
 		for (int i = 0; i < kilRec.length; i++) {
 			suma += kilRec[i];
 		}
-		resultado = resultado.add(BigDecimal.valueOf(suma).divide(BigDecimal.valueOf(kilRec.length))); // suma (capa 1)
-																										// valor de
+		MathContext contexto = new MathContext(2, RoundingMode.HALF_UP);
+		resultado = resultado.add(BigDecimal.valueOf(suma).divide(BigDecimal.valueOf(kilRec.length), contexto)); // suma
+																													// (capa
+																													// 1)
+		// valor de
 		// suma(capa 2) dividido
 		// valor de length(capa 3)
 		return resultado;
@@ -112,7 +115,7 @@ public class Flota {
 
 	public static void inicioInforme(String mensaje, int espacio) {
 		espacio += 7; // 7 por la cantidad de = en la string mas el espacio.
-		System.out.printf("====== %s%dG%s%s%dG =====%n", ESCAPE, espacio, mensaje, ESCAPE,
+		System.out.printf("====== %s%dG%s%s%dG ======%n", ESCAPE, espacio, mensaje, ESCAPE,
 				(espacio * 2) + mensaje.length() - 7);
 	}
 
